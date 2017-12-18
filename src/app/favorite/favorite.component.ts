@@ -17,3 +17,4 @@ export class FavoriteComponent implements OnInit {
     this.change.emit(this.isSelected);
   }
 }
+ 
