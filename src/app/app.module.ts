@@ -12,6 +12,8 @@ import { AuthorsService } from "./authors.service";
 import { FavoriteComponent } from './favorite/favorite.component';
 import { InputTitleCaseComponent } from './input-title-case/input-title-case.component';
 import { TitleCasePipe } from './title-case.pipe';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TitleCasePipe } from './title-case.pipe';
     AuthorsComponent,
     FavoriteComponent,
     InputTitleCaseComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    PanelComponent,
+    LikeComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [CoursesService, AuthorsService],
