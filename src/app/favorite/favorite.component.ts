@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./favorite.component.css"]
 })
 export class FavoriteComponent implements OnInit {
-  @Input("isSelected") isSelected: boolean;
+  @Input("isFavorite") isSelected: boolean;
   @Output() change = new EventEmitter();
   constructor() {}
 
@@ -17,4 +17,3 @@ export class FavoriteComponent implements OnInit {
     this.change.emit(this.isSelected);
   }
 }
- 
