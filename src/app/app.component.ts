@@ -6,11 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  task = {
-    title: 'Review applications',
-    assignee: {
-      name: 'John Smith'
-    }
-  };
-}
+export class AppComponent {}
