@@ -1,8 +1,7 @@
-<button (click)="loadCourses()">Load Courses</button>
-<ul>
-    <li *ngFor="let course of courses; trackBy: trackCourse">
-        {{ course.name }}
-        <button (click)="onChange(course)">Remove</button>
-    </li>
-</ul>
-<favorite></favorite>
+<button [ngStyle]="{
+        'backgroundColor': canSave ? 'blue': 'gray',
+        'color': canSave ? 'white': 'black',
+        'fontWeight': canSave ? 'bold': 'normal'
+    }">
+    Save
+</button>
