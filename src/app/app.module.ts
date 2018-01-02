@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
-
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-=======
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
@@ -29,14 +9,15 @@ import { AuthorsComponent } from "./authors/authors.component";
 
 import { CoursesService } from "./courses.service";
 import { AuthorsService } from "./authors.service";
-import { FavoriteComponent } from './favorite/favorite.component';
-import { InputTitleCaseComponent } from './input-title-case/input-title-case.component';
-import { TitleCasePipe } from './title-case.pipe';
-import { PanelComponent } from './panel/panel.component';
-import { LikeComponent } from './like/like.component';
-import { InputFormatDirective } from './input-format.directive';
-import { ZippyComponent } from './zippy/zippy.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FavoriteComponent } from "./favorite/favorite.component";
+import { InputTitleCaseComponent } from "./input-title-case/input-title-case.component";
+import { TitleCasePipe } from "./title-case.pipe";
+import { PanelComponent } from "./panel/panel.component";
+import { LikeComponent } from "./like/like.component";
+import { InputFormatDirective } from "./input-format.directive";
+import { ZippyComponent } from "./zippy/zippy.component";
+import { ContactFormComponent } from "./contact-form/contact-form.component";
+import { CourseFormComponent } from './course-form/course-form.component';
 
 @NgModule({
   declarations: [
@@ -51,11 +32,11 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     LikeComponent,
     InputFormatDirective,
     ZippyComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    CourseFormComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [CoursesService, AuthorsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
->>>>>>> f05f69ae715952a58d94af018f60ca25bd707188

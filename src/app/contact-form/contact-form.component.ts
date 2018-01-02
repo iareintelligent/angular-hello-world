@@ -1,9 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'contact-form',
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css']
+  selector: "contact-form",
+  templateUrl: "./contact-form.component.html",
+  styleUrls: ["./contact-form.component.css"]
 })
-export class ContactFormComponent {}
+export class ContactFormComponent {
+  contactMethods = [{ id: 1, name: "Email" }, { id: 2, name: "Phone" }];
+  onChange(firstName) {
+    console.log(firstName);
+  }
+
+  submit(f) {
+    console.log(f);
+  }
+}
