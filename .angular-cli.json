@@ -1,7 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
+<<<<<<< HEAD
+    "name": "angular-tour-of-heroes"
+=======
     "name": "hello-world"
+>>>>>>> f05f69ae715952a58d94af018f60ca25bd707188
   },
   "apps": [
     {

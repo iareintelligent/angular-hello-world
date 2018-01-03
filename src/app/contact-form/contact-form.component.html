@@ -1,4 +1,5 @@
 <form #f="ngForm" (ngSubmit)="submit(f)">
+<<<<<<< HEAD
   <div class="form-group">
     <label for="firstName">First Name</label>
     <input required minlength="3" maxlength="15" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" type="text"
@@ -6,11 +7,41 @@
     <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
       <div *ngIf="firstName.errors.required">First Name is Required</div>
       <div *ngIf="firstName.errors.minlength">Minimum length is 2 characters</div>
+=======
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="!contact.valid">...</div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input required minlength="3" maxlength="10" ngModel type="text" name="firstName" #firstName="ngModel" (change)="onChange(firstName)"
+        class="form-control">
+      <div *ngIf="firstName.touched && !firstName.valid">
+        <div class="alert alert-danger" *ngIf="firstName.errors">Error</div>
+      </div>
+>>>>>>> 9496e9f6513a949845010ec9377b143b59f76b58
     </div>
   </div>
+
   <div class="form-group">
     <label for="comment">Comment</label>
-    <textarea ngModel name="comment" #comment="ngModel" (change)="log(comment)" id="comment" cols="30" rows="10" class="form-control"></textarea>
+    <textarea ngModel name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
   </div>
-  <button class="btn btn-primary">Submit</button>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ngModel name="isSubscribed"> Subscribe to mailing list
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="contact-method">Contact method</label>
+    <select multiple ngModel name="contactMethod" id="contact-method" class="form-control">
+      <option value=""></option>
+      <option *ngFor="let method of contactMethods" [value]="method.id">{{ method.name }}</option>
+    </select>
+  </div>
+  <div *ngFor="let method of contactMethods" class="radio">
+    <label>
+      <input ngModel type="radio" name="contactMethod" value="{{ method.id }}">{{ method.name }}
+    </label>
+  </div>
+  <p>{{ f.value | json }}</p>
+  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
 </form>
