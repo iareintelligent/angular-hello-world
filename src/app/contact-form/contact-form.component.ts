@@ -15,7 +15,4 @@ export class ContactFormComponent {
   submit(f) {
     console.log(f);
   }
-  submit(f) {
-    f.value;
-  }
 }
