@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-# AngularTourOfHeroes
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
-=======
 # HelloWorld
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
->>>>>>> f05f69ae715952a58d94af018f60ca25bd707188
 
 ## Development server
 
